@@ -19,20 +19,53 @@ const ShuangYangAdCocosSdkFramework = {
     // cp 调用
 
     /**
+     * 同步
      * 调用获取当前原生平台API版本
      * @returns {*}
      */
     getVersion: function () {
         return jsb.reflection.callStaticMethod("com/shuangyangad/cocos/sdk/framework/ShuangnYangAdSdkFramework", "onVersion", "()Ljava/lang/String;");
     },
-    //
+
     /**
+     * 统一风格,修改名称,不影响上面的可以正常使用
+     * 同步
+     * 调用获取当前原生平台API版本
+     * @returns {any}
+     */
+    version: function () {
+        return jsb.reflection.callStaticMethod("com/shuangyangad/cocos/sdk/framework/ShuangnYangAdSdkFramework", "onVersion", "()Ljava/lang/String;");
+    },
+
+
+    /**
+     * 异步
      * 获取用户信息
      * 此方法为异步回调,回调 onUserInfo 方法
      */
     getUserInfo: function () {
         jsb.reflection.callStaticMethod("com/shuangyangad/cocos/sdk/framework/ShuangnYangAdSdkFramework", "onUserInfo", "()V");
     },
+
+    /**
+     * 统一风格,修改名称,不影响上面的可以正常使用
+     * 同步
+     * 获取用户信息
+     */
+    requestUserInfo: function () {
+        return jsb.reflection.callStaticMethod("com/shuangyangad/cocos/sdk/framework/ShuangnYangAdSdkFramework", "onRequestUserInfo", "()Ljava/lang/String;");
+
+    },
+
+    /**
+     * 统一风格,修改名称
+     * 同步
+     * 获取用户进度
+     */
+    requestSchedule: function () {
+        return jsb.reflection.callStaticMethod("com/shuangyangad/cocos/sdk/framework/ShuangnYangAdSdkFramework", "onRequestSchedule", "()I");
+    },
+
 
     /**
      * 打开个人中

@@ -54,4 +54,14 @@ cc.Class({
         console.log("js 测试原生回调 ")
         cc.shuangnyangadcocossdkframeworkchannel.testNativeCall()
     },
+    onBtuttonSchedule() {
+        console.log("js 获取进度 : " + cc.shuangnyangadcocossdkframeworkchannel.requestSchedule())
+
+    },
+    onBtuttonUserInfo1() {
+        console.log("js 获取用户信息 : " + cc.shuangnyangadcocossdkframeworkchannel.requestUserInfo())
+    },
+    onBtuttonVersion1() {
+        console.log("新获取版本 : " + cc.shuangnyangadcocossdkframeworkchannel.version())
+    },
 });
